@@ -1,0 +1,241 @@
+body {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+}
+
+.container {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.calculator-container {
+    flex: 0 0 400px;
+    margin-right: 20px; /* Espacio a la derecha de la calculadora */
+}
+
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los elementos de la columna derecha */
+}
+
+h1, h2 {
+    color: #4a4a4a;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    color: #4a4a4a;
+    font-size: 14px;
+}
+
+.login-form, .registro-form, .calculator, .admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form input, .registro-form input, .calculator input, .calculator select, .admin-form input, .admin-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8e44ad;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #732d91;
+}
+
+.result-section {
+    background-color: #e0e0e0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+}
+.estiloResultados1 {    
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+}
+.result-section p {
+    color: #4a4a4a;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.close-btn {
+    background-color: #ff6b6b;
+    margin-top: 0;
+}
+
+.close-btn:hover {
+    background-color: #ff5252;
+}
+
+.cotizacion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cotizacion-item label {
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.cotizacion-item input {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100px;
+    background-color: #f9f9f9;
+}
+
+.cotizacion-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cotizacion-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+#login-form button, #verHistorial {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8e44ad;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#login-form button:hover, #verHistorial:hover {
+    background-color: #732d91;
+}
+
+.boton-eliminar {
+    background-color: #ff6b6b;
+    color: #fff;
+}
+
+.boton-eliminar:hover {
+    background-color: #ff5252;
+}
+
+#selectEliminarMoneda {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .login-form input, .registro-form input, .calculator input, .calculator select, .admin-form input, .admin-form select {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .cotizacion-item input {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+#login-form button, #verHistorial {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8e44ad;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#login-form button:hover, #verHistorial:hover {
+    background-color: #732d91;
+}

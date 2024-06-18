@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertidor de Divisas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="flex-container">
+            <div class="container calculator-container">
+                <h2>Calculadora de Divisas</h2>
+                <p>Utiliza esta calculadora para convertir montos entre diferentes divisas.</p>
+                <div class="calculator">
+                    <input type="number" id="monto" placeholder="Monto">
+                    <select id="monedaOrigen"></select>
+                    <select id="monedaDestino"></select>
+                    <div class="calculator-buttons">
+                        <button id="convertir">Convertir</button>
+                        <button id="verCotizaciones">Ver Cotizaciones</button>
+                    </div>
+                </div>
+
+                <div id="resultado" class="result-section">
+                    <span id="resultado-text" class="estiloResultados1"></span>
+                    <button id="close-resultado" class="close-btn">Cerrar</button>
+                </div>
+
+                <div id="cotizaciones-text" class="result-section">
+                    <div id="cotizaciones-text-inner"></div>
+                </div>
+            </div>
+
+            <div class="right-container">
+                <div id="registro-container" class="container">
+                    <h2>Registro</h2>
+                    <p>Regístrate para crear una nueva cuenta y ver el historial de transacciones.</p>
+                </div>
+
+                <div id="login-container" class="container">
+                    <h2>Inicio de Sesión</h2>
+                    <p>Por favor, ingresa tus credenciales para acceder a tu cuenta y ver el historial de transacciones.</p>
+                </div>
+
+                <div id="admin-section" class="container" style="display:none;">
+                    <h2>Administración de Cotizaciones</h2>
+                    <div id="cotizaciones-admin" class="admin-form"></div>
+                    <div class="admin-form">
+                        <h3>Agregar Nueva Moneda</h3>
+                        <input type="text" id="nuevaMoneda" placeholder="Nueva Moneda">
+                        <input type="text" id="nombreMonedaCompleto" placeholder="Nombre Completo de la Moneda">
+                        <div id="nuevasTasasDiv"></div>
+                        <button id="agregarMoneda">Agregar Moneda</button>
+                    </div>
+                    <div id="relacionesDiv" class="admin-form"></div>
+                </div>
+                
+                <div id="historial" class="result-section">
+                    <span id="historial-text"></span>
+                    <button id="close-historial" class="close-btn">Cerrar</button>
+                    <button id="limpiar-historial" class="close-btn">Limpiar Historial</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="firebaseManager.js"></script>
+    <script src="convertidorDivisas.js"></script>
+    <script src="funciones.js"></script>
+</body>
+</html>
