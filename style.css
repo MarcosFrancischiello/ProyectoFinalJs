@@ -38,14 +38,14 @@ body {
 
 .calculator-container {
     flex: 0 0 400px;
-    margin-right: 20px; /* Espacio a la derecha de la calculadora */
+    margin-right: 20px;
 }
 
 .right-container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio entre los elementos de la columna derecha */
+    gap: 20px;
 }
 
 h1, h2 {
