@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -19,7 +19,9 @@ body {
     background-color: #444;
     border-radius: 10px;
     overflow-y: auto;
+    margin: 20px 0;
 }
+
 .flex-container {
     display: flex;
     justify-content: flex-start;
@@ -34,18 +36,19 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box;
 }
 
 .calculator-container {
-    flex: 0 0 400px;
-    margin-right: 20px;
+    flex-basis: 50%;
+    box-sizing: border-box;
 }
 
 .right-container {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    box-sizing: border-box;
 }
 
 h1, h2 {
@@ -103,11 +106,13 @@ button:hover {
     display: none;
     text-align: center;
 }
-.estiloResultados1 {    
+
+.estiloResultados1 {
     background-color: #fff;
     padding: 5px;
     border-radius: 4px;
 }
+
 .result-section p {
     color: #4a4a4a;
     background-color: #fff;
@@ -166,6 +171,7 @@ select {
     font-size: 14px;
     background-color: #f9f9f9;
 }
+
 #login-form button, #verHistorial {
     width: 100%;
     margin-top: 10px;
@@ -196,7 +202,7 @@ select {
     margin-top: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
     .flex-container {
         flex-direction: column;
         gap: 10px;
@@ -221,21 +227,28 @@ select {
         font-size: 12px;
         padding: 5px;
     }
-}
 
-#login-form button, #verHistorial {
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #8e44ad;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
-}
+    .main-container {
+        width: 100%;
+        padding: 10px;
+        margin: 20px;
+    }
 
-#login-form button:hover, #verHistorial:hover {
-    background-color: #732d91;
+    .calculator-container {
+        flex: 1 1 100%;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .result-section {
+        padding: 10px;
+    }
+
+    .right-container {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+.cotizacion-wrapper {
+    flex-direction: column;
 }
