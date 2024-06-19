@@ -221,6 +221,7 @@ select {
     .login-form input, .registro-form input, .calculator input, .calculator select, .admin-form input, .admin-form select {
         font-size: 12px;
         padding: 8px;
+        text-align: center;
     }
 
     .cotizacion-item input {
